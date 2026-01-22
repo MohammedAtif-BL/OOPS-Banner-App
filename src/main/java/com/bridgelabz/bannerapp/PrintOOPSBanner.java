@@ -1,0 +1,7 @@
+package com.bridgelabz.bannerapp;
+
+public class PrintOOPSBanner {
+    public static void main(String[] args) {
+        System.out.println("OOPS");
+    }
+}
