@@ -1,32 +1,66 @@
 package com.bridgelabz.bannerapp;
 
 /**
- * UC5: Render OOPS Banner App using inline Array Initialization and Enhanced For Loop
+ * UC6: Render OOPS Banner using Pattern Programming
  *
- * This use case extends UC4 by utilizing inline array initialization to store the
- * lines of the OOPS banner. An enhanced for loop is then used to iterate through
- * the array and print each line of the banner to the console.
+ * This use case extends UC5 by implementing a method to print the "OOPS" banner
+ * using pattern programming. Each letter is represented by a specific pattern of
+ * asterisks and spaces. This enhances code readability and modularity by separating
+ * the pattern definitions into individual methods.
  *
  * @author Bridgelabz
- * @version 5.0
+ * @version 6.0
  */
 
 public class PrintOOPSBanner {
 
-    public static void main(String[] args) {
-
-        String[] bannerLines = {
-                String.join(" ", "   ***   ", "    ***    ", "******   ", "  ****** "),
-                String.join(" ", " **   ** ", "  **   **  ", "**    ** ", "**       "),
-                String.join(" ", "**     **", " **     ** ", "**    ** ", "**       "),
-                String.join(" ", "**     **", " **     ** ", "*******  ", " ******* "),
-                String.join(" ", "**     **", " **     ** ", "**       ", "       **"),
-                String.join(" ", " **   ** ", "  **   **  ", "**       ", "       **"),
-                String.join(" ", "   ***   ", "    ***    ", "**       ", " ******* "),
+    public static String[] getOPattern() {
+        return new String[]{
+                "   ***   ",
+                " **   ** ",
+                "**     **",
+                "**     **",
+                "**     **",
+                " **   ** ",
+                "   ***   "
         };
-        // Print banner using enhanced for loop
-        for (String line : bannerLines) {
-            System.out.println(line);
+    }
+
+
+    public static String[] getPPattern() {
+        return new String[]{
+                "******   ",
+                "**    ** ",
+                "**    ** ",
+                "*******  ",
+                "**       ",
+                "**       ",
+                "**       "
+        };
+    }
+
+
+    public static String[] getSPattern() {
+        return new String[]{
+                "  ****** ",
+                "**       ",
+                "**       ",
+                " ******* ",
+                "       **",
+                "       **",
+                " ******  "
+        };
+    }
+
+
+    public static void main(String[] args) {
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
+
+
+        for (int i = 0; i < 7; i++) {
+            System.out.println(oPattern[i]+" "+oPattern[i]+" "+pPattern[i]+" "+sPattern[i]);
         }
     }
 }
